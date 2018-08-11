@@ -1,2 +1,2 @@
 # solvedWithJava
-Problems solved using Java from Hacckerrank
+Problems solved using Java from Hackerrank
