@@ -1,0 +1,46 @@
+
+//This is an example of not using static
+
+public class staticDemo
+{
+  
+  public static void main(String[] args)
+  {
+    Abc obj = new Abc();
+    obj.show();
+  }
+  
+}
+
+class Abc
+{
+ 	public void show()
+    {
+     System.out.println("Hi"); 
+      
+    }
+  
+  
+}
+
+//This is an example of using static
+public class staticDemo
+{
+  
+  public static void main(String[] args)
+  {
+    
+    Abc.show();
+  }
+  
+}
+
+class Abc
+{
+ 	public static void show()
+    {
+     System.out.println("Hi"); 
+      
+    }
+  
+}
