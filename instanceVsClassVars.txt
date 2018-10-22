@@ -1,0 +1,81 @@
+package instanceVsClassVars;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//Instance Variable example //
+		System.out.println("Instance Variable Example");
+		InstanceVariable i1=new InstanceVariable();
+		i1.code=123456;
+		
+		InstanceVariable i2=new InstanceVariable();
+		i2.code=987654;
+		
+		System.out.println(i1.code);
+		System.out.println(i2.code);
+		
+		
+		//Class variable example
+		System.out.println("Class Variable Example");
+		ClassVar c1= new ClassVar();
+		c1.setCode(123456);
+		
+		ClassVar c2= new ClassVar();
+		c2.setCode(987654);
+		
+		System.out.println(c1.getCode());
+		System.out.println(c2.getCode());
+		
+		Cat kiki=new Cat();
+		System.out.println(kiki.name);
+		
+		Cat meow = new Cat("Kiki", "brown");
+		System.out.println(meow.name);
+		
+	}
+
+}
+/////////////////
+package instanceVsClassVars;
+
+public class InstanceVariable {
+	public int code;
+}
+/////////////////
+package instanceVsClassVars;
+
+public class ClassVar {
+	public static int code;
+	
+	public int getCode() {
+		return code;
+	}
+	
+	public void setCode(int value) {
+		code = value;
+	}
+}
+///////////////////
+package instanceVsClassVars;
+
+public class Cat {
+	static String unnamed = "I have no name yet meow";
+	int weight;
+	String name;
+	String coatColor;
+	
+	Cat(){ //default constructor
+		this.weight =0;
+		this.name=unnamed;
+		this.coatColor = "none";
+	}
+	
+	Cat(String catName, String color){
+		this.weight=0;
+		this.name=catName;
+		this.coatColor=color;
+	}
+
+}
+
+

@@ -1,0 +1,32 @@
+//https://www.hackerrank.com/challenges/30-review-loop/problem
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    
+    public static String sln(String s){
+        StringBuilder evens=new StringBuilder();
+        StringBuilder odds=new StringBuilder();
+        char[] myCharArry = s.toCharArray();
+        for(int i=0; i< s.length(); i++){
+            if(i%2== 0){
+                evens.append(myCharArry[i]);
+            }else{odds.append(myCharArry[i]);}
+        }
+        String e=evens.toString();
+        String o=odds.toString();
+        String wholeAns=e+" "+o;
+        return wholeAns;
+    }
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int howMany=scan.nextInt();
+        scan.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        for(int i=0; i<=howMany; i++){
+            String s= scan.nextLine();
+            System.out.println(sln(s));
+        }
+    }
+}
